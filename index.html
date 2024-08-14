@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grading system by Aloko Lambert</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-align: center;
+            background: #040;
+        }
+        p{
+            color: white;
+        }
+        button{
+            padding: 10px;
+            background: #000;
+            color: #fff;
+            border: 1px solid yellow;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        video{
+            width: 150px;
+            height: 150px;
+            border: 1px solid yellow;
+        }
+        img{
+            width: 50px;
+            height: 100px;
+            border: 2px solid yellow;
+            border-radius: 50%;
+            animation: changeIMG linear 5s infinite;
+        }
+
+        @keyframes changeIMG{
+            100%{
+              opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Click the button below to check your grade</p>
+    <button type="button" onclick="checkGrade()">Click here</button>
+    <br><br>
+    <video src="videos/sg2.mp4" controls autoplay muted loop></video>
+    <br>
+    <img src="images/me.jpg" alt="picture">
+    <script>
+// using conditional statements to create a grading system
+// check mark and grade the person
+ function checkGrade(){
+    
+let studentMark = parseFloat(prompt('please enter your mark or score here\n from 0 to 100'));
+// from 0-44
+if( studentMark <= 44 ){
+    alert(`You Entered ${studentMark} and your grade is F`)
+} 
+// from 45 to 49
+else if( studentMark >44 && studentMark <=49 ){
+    alert(`You Entered ${studentMark} and your grade is E`)
+
+} 
+// from 50 to 55
+else if( studentMark >49 && studentMark <=55){
+    alert(`You Entered ${studentMark} and your grade is D`)
+} 
+// from 56 to 60
+else if( studentMark >55 && studentMark <=60){
+    alert(`You Entered ${studentMark} and your grade is D+`)
+}
+// from 61 to 70
+else if( studentMark >60 && studentMark <=70){
+    alert(`You Entered ${studentMark} and your grade is C`)
+}
+// from 71 t0 75
+else if( studentMark >70 && studentMark <=75){
+    alert(`You Entered ${studentMark} and your grade is C+`)
+} 
+// from 76 to 79
+else if( studentMark >75 && studentMark <=79){
+    alert(`You Entered ${studentMark} and your grade is B`)
+}
+// from 80 to 85
+else if( studentMark >79 && studentMark <=85 ){
+    alert(`You Entered ${studentMark} and your grade is B+`)
+}
+// from 86 to 90
+else if( studentMark >85 && studentMark <=90){
+    alert(`You Entered ${studentMark} and your grade is A,Keep it up`)
+}
+else if( studentMark >90 && studentMark <=100){
+    alert(`You Entered ${studentMark} and your grade is A+ thus Excellent`)
+}
+// out of range from 1001 to infinity
+else if( studentMark > 100){
+    alert(` You Entered ${studentMark} and you cannot get a mark more than 100`)
+}
+// user enter nothing or letters
+else{
+    alert(` You Entered ${studentMark} and this is not a number`)
+}
+
+ }
+</script>
+</body>
+</html>
